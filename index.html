@@ -2,32 +2,70 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Stats preview card component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <title>Stats preview card component</title>
+
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    body {
+      height: 100vh;
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      background-color: hsl(233, 47%, 7%);
+    }
+
+    .font-deca {
+      font-family: 'Lexend Deca', sans-serif;
+    }
+
+    .custom-bg-card {
+      background-color: hsl(244, 38%, 16%);
+    }
+    .custom-violet-color {
+      color: hsl(277, 64%, 61%);
+    }
+    .custom-transparent-white {
+      color: hsla(0, 0%, 100%, 0.75)
+    }
   </style>
 </head>
 <body>
 
-  Get insights that help your business grow.
+<div class="h-full flex flex-col md:flex-row justify-center items-center">
+  <div class="flex mx-8 md:mx-20 lg:mx-40">
+    <div class="text-white custom-bg-card py-10 pl-10 pr-32 basis-3/5">
+      <h2 class="font-bold text-5xl mb-8">Get <span class="custom-violet-color">insights</span> that help your business grow.</h2>
+      <div class="custom-transparent-white text-xl mb-20">
+        Discover the benefits of data analytics and make better decisions regarding revenue, customer experience, and overall efficiency.
+      </div>
+      <div class="flex justify-between mb-8 uppercase">
+        <div>
+          <div class="text-2xl font-bold">10k+</div>
+          <div class="custom-transparent-white font-deca">companies</div>
+        </div>
+        <div>
+          <div class="text-2xl font-bold">314</div>
+          <div class="custom-transparent-white font-deca">templates</div>
+        </div>
+        <div>
+          <div class="text-2xl font-bold">12m+</div>
+          <div class="custom-transparent-white font-deca">queries</div>
+        </div>
+      </div>
+    </div>
+    <div class="relative before:absolute before:inset-0 before:bg-violet-500 before:opacity-30">
+      <img src="images/image-header-desktop.jpg" alt="image-header-des" class="object-cover object-right h-full">
+    </div>
 
-  Discover the benefits of data analytics and make better decisions regarding revenue, customer 
-  experience, and overall efficiency.
-
-  10k+ companies
-  314 templates
-  12m+ queries
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
   </div>
+</div>
+
 </body>
 </html>
